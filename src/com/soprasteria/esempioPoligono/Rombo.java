@@ -3,19 +3,36 @@ package com.soprasteria.esempioPoligono;
 public class Rombo implements Poligono{
 	private float base;
 	private float altezza;
+	private float lato;
 	
-	public Rombo(float base, float altezza) {
+	public Rombo(float base, float altezza,float lato) {
 		this.setBase(base);
 		this.setAltezza(altezza);
-		System.out.println("Area Rombo: " + calcoloArea(base, altezza));
+		this.setLato(lato);
+		System.out.println("Area Rombo: " + 1);
 	}
 
-	private float calcoloArea(float base,float altezza) {
-		return base * altezza;
+	
+	public float getLato() {
+		return lato;
 	}
-	/**
-	 * @return the altezza
-	 */
+
+
+	public void setLato(float lato) {
+		this.lato = lato;
+	}
+
+
+	public float calcoloArea() {
+		return getBase() * getAltezza();
+	}
+	
+
+	
+	public float calcoloPerimetro() {
+		return getLato() * 4;
+	}
+	
 	public float getAltezza() {
 		return altezza;
 	}
@@ -40,4 +57,8 @@ public class Rombo implements Poligono{
 	public void setBase(float base) {
 		this.base = base;
 	}
+
+	
+
+	
 }
