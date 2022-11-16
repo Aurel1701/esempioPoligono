@@ -31,5 +31,9 @@ public class Parallelogramma {
 		return (float) (base*altezza);
 	}
 	
+	public float calcoloPerimetro() {
+		return (base * 2) + (altezza * 2);
+	}
+	
 
 }
